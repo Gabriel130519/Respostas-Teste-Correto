@@ -1,0 +1,23 @@
+#include <stdlib.h>
+#include <stdio.h>
+
+Int main () {
+Int num, f1=0, f2=1, f3;
+Scanf(“%d”, &num);
+
+If (num < 0) {
+Printf(“Numero inválido”);
+}else{
+Printf (“0 – 1”);
+
+While (f2 < num) {
+F3 = f2 + f1;
+Printf (“-%d”, f3);
+F1=f2;
+F2=f3;
+}
+Printf(“\n”);
+System(“pause”);
+Return 0;
+}
+}
