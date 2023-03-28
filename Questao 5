@@ -1,0 +1,12 @@
+void inverter(char vet[]){
+    int i, aux, fim, tam = strlen(vet);
+
+    fim = tam - 1;
+    for(i = 0; i < tam/2; i++)
+{
+        aux = vet[i];
+        vet[i] = vet[fim];
+        vet[fim] = aux;
+        fim--;
+    }
+}
