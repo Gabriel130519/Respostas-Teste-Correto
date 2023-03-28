@@ -1,0 +1,13 @@
+Create table Faturamento Mensal (Estado varchar (50), Valor int);
+Insert into  Faturamento Mensal (Estado, Valor) values 
+(‘SP’, 67836.43),
+(‘RJ’, 36678.66),
+(‘MG’, 29229.88),
+(‘ES’, 27165.48),
+(‘Outros’, 19849.53);
+
+select estado, percent*100
+from
+(select estado, cast(valor as decimal(20,2))/cast((select sum(valor) as total from Faturamento Mensal) as decimal (20,2)) as percent,
+cast((select sum(valor) as total from Faturamento Mensal) as decimal (20,2)) from Faturamento Mensal
+group by 1) a;
